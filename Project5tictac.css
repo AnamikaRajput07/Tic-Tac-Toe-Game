@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(45deg,lavender,purple,rgb(46, 10, 46));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 2px purple,-1px -1px 2px purple;
+    font-size: 20px;
+}
+.board{
+    margin-top: 5rem;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.cell{
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    
+}
+
+#cell1, #cell2, #cell5, #cell4{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+#cell3, #cell6{
+    border-bottom: 2px solid white;
+}
+
+#cell7, #cell8{
+    border-right: 2px solid white;
+}
+
+.btn{
+    margin: 5rem;
+    width: 200px;
+    height: 50px;
+    background-color: plum;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 2px purple,-1px -1px 2px purple;
+    font-size: 16px;
+    color: white;
+    scale:0;
+}
+
+.active{
+    scale: 1;
+}
+
+.win{
+    background-color: green;
+}
